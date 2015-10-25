@@ -93,7 +93,6 @@ sed --in-place='' \
 # First, get capnproto from master and install it to
 # /usr/local/bin. This requires a C++ compiler. We opt for clang
 # because that's what Sandstorm is typically compiled with.
-sudo rm -f /usr/local/bin/capnp
 if [ ! -e /usr/local/bin/capnp ] ; then
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -q clang autoconf pkg-config
     cd /tmp
