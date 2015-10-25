@@ -90,8 +90,9 @@ sed --in-place='' \
 
 ### Download & compile capnproto and the Sandstorm getPublicId helper.
 
-# First, get v0.5.3 of capnp and install it to /usr/local/bin. This
-# requires a C++ compiler. We opt for clang because
+# First, get capnproto from master and install it to
+# /usr/local/bin. This requires a C++ compiler. We opt for clang
+# because that's what Sandstorm is typically compiled with.
 sudo rm -f /usr/local/bin/capnp
 if [ ! -e /usr/local/bin/capnp ] ; then
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -q clang autoconf pkg-config
@@ -106,7 +107,7 @@ if [ ! -e /usr/local/bin/capnp ] ; then
     sudo make install
 fi
 
-# Now, compile the small C++ program within
+# Second, compile the small C++ program within
 # /opt/app/sandstorm-integration.
 if [ ! -e /opt/app/sandstorm-integration/getPublicId ] ; then
     pushd /opt/app/sandstorm-integration
