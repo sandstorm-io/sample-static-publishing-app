@@ -5,7 +5,6 @@
 <?php
 $publishingInfo = getPublishingHelperOutputLines();
 $autoUrl = $publishingInfo[2];
-
 ?>
 
 <ul>
