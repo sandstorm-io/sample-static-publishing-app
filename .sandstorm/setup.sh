@@ -97,13 +97,14 @@ if [ ! -e /usr/local/bin/capnp ] ; then
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -q clang autoconf pkg-config
     cd /tmp
     if [ ! -e capnproto ]; then git clone https://github.com/sandstorm-io/capnproto; fi
-    cd capnproto
+    pushd capnproto
     git checkout master
     cd c++
     autoreconf -i
     ./configure
     make -j2
     sudo make install
+    popd
 fi
 
 # Second, compile the small C++ program within
@@ -111,5 +112,6 @@ fi
 if [ ! -e /opt/app/sandstorm-integration/getPublicId ] ; then
     pushd /opt/app/sandstorm-integration
     make
+    popd
 fi
 ### All done.
