@@ -120,6 +120,7 @@ opt/app/before_publish.php
 opt/app/functions.php
 opt/app/index.php
 opt/app/after_publish.php
+opt/app/sandstorm-integration/bin/getPublicId
 proc/cpuinfo
 sandstorm-http-bridge
 sandstorm-http-bridge-config
