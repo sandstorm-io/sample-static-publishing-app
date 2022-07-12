@@ -24,7 +24,7 @@ $justHostOfAutoUrl = parse_url($autoUrl, PHP_URL_HOST);
 <p>1. Add a <tt>CNAME</tt> record.</p>
 
 <ul>
-    <li<tt>example.com. IN CNAME <?php echo $justHostOfAutoUrl; ?></tt></li>
+    <li><tt>example.com. IN CNAME <?php echo $justHostOfAutoUrl; ?></tt></li>
 </ul>
 
 <p>2. Add a <tt>TXT</tt> record.</p>
@@ -34,7 +34,7 @@ $publicId = $publishingInfo[0];
 ?>
 
 <ul>
-    <li<tt>sandstorm-www.example.com. IN TXT <?php echo $publicId; ?></tt></li>
+    <li><tt>sandstorm-www.example.com. IN TXT <?php echo $publicId; ?></tt></li>
 </ul>
 
 <p>If you want, you can even put a CDN like CloudFlare in front of <tt>example.com</tt>!
